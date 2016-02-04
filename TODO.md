@@ -1,3 +1,3 @@
 # PHP QA toolchain TODOs
 
-* add colors to lint.sh
+* [ ] add colors to lint.sh
