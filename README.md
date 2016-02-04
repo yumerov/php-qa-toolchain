@@ -1,2 +1,3 @@
-# php-qa-toolchain
-Collection of scripts for PHP Quality Assurance
+# PHP QA Toolchain
+
+Collection of scripts for PHP Quality Assurance.
