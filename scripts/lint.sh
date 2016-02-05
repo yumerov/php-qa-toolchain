@@ -7,14 +7,10 @@ declare -r SOURCE_DIR=$1;
 declare -r INTERVAL=$2;
 declare error_output;
 
-if [ "$SOURCE_DIR" ];
-then
-  if [ -d "$SOURCE_DIR" ];
-  then
-    if [ "$INTERVAL" ];
-    then
-      if [[ "$INTERVAL" =~ ^[0-9]+$ ]];
-      then
+if [ "$SOURCE_DIR" ]; then
+  if [ -d "$SOURCE_DIR" ]; then
+    if [ "$INTERVAL" ]; then
+      if [[ "$INTERVAL" =~ ^[0-9]+$ ]]; then
         watch -n $INTERVAL "
           echo \"PHP Active Linter by Levent \\\"lzy\\\" Yumerov\";
           find $SOURCE_DIR -type f -name \"*.php\" \
@@ -34,7 +30,6 @@ else
   error_output="Source directory is not set.";
 fi
 
-if [ "$error_output" ];
-then
+if [ "$error_output" ]; then
   echo -e "${error_output}\n${USAGE}\n${EXAMPLE}";
 fi
